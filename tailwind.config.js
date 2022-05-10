@@ -1,3 +1,4 @@
+
 module.exports = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx}',
@@ -6,9 +7,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        headerBlue: "#2874F0",
-      }
+        headerBlue: '#2874F0',
+        textGreen: "#388e3c",
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/line-clamp'),
+  ],
 }
