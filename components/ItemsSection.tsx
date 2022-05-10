@@ -29,7 +29,6 @@ interface cardProps {
 function Card({ data, count }: cardProps) {
   const [style, setStyle] = useState("mx-3 flex h-fit w-[2000px] flex-row items-center justify-around bg-white py-3 2xl:w-full");
   useEffect(() => {
-    console.log(count)
     if(count < 5){
       setStyle("mx-3 flex h-fit w-full flex-row items-center justify-around bg-white py-3 2xl:w-full")
     }
@@ -52,7 +51,6 @@ function ItemsSection({ value }: Props) {
       <p className="my-3 pl-5 text-2xl font-semibold">{value.name}</p>
       <div className="pl-2 overflow-x-scroll flex flex-row">
         {value.content.map((item, index) => {
-          console.log(item)
           return <Card key={index} data={item} count={value.content.length}/>
         })}
       </div>
