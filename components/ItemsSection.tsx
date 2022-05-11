@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import { displayItems, urlFor } from '../pages'
-
+import { displayItems } from '../pages'
+import { urlFor } from '../sanitySetup'
 
 interface Props {
   value: displayItems

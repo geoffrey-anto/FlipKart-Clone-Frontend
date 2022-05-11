@@ -1,26 +1,11 @@
-import type { NextPage } from 'next'
 import sanityApi from '../sanitySetup'
 import Head from 'next/head'
 import Header from '../components/Header'
 import ItemsSection from '../components/ItemsSection'
 import SlidingPanel from '../components/SlidingPanel'
 import TopBar, { Data } from '../components/TopBar'
-import imageUrlBuilder from '@sanity/image-url'
-import { ImageUrlBuilder } from '@sanity/image-url/lib/types/builder'
 import Footer from '../components/Footer'
 
-const builder: ImageUrlBuilder = imageUrlBuilder(sanityApi)
-export function urlFor(source: SanityImage): ImageUrlBuilder {
-  return builder.image(source)
-}
-
-interface SanityImage {
-  _type: string
-  asset: {
-    _ref: string
-    _type: string
-  }
-}
 export interface displayItems {
   _id: string
   name: string
